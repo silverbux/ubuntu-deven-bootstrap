@@ -140,7 +140,6 @@ sudo apt-get install aptitude synaptic gdebi-core
 
 #remove dots in login screen
 sudo xhost +SI:localuser:lightdm
-sudo su lightdm -s /bin/bash
 gsettings set com.canonical.unity-greeter draw-grid false
 
 #Install Java
