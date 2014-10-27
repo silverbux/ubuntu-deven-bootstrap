@@ -7,6 +7,9 @@ sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql
 #Install PHP
 sudo apt-get install php5 php5-mysql php-pear php5-gd  php5-mcrypt php5-curl php5-dev
 
+#Install sasl (required by php_mongo)
+sudo apt-get install libsasl2-dev
+
 #Install MongoDB
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
@@ -17,7 +20,7 @@ sudo service mongod stop
 sudo service mongod restart
 
 #Install PHP Mongo Connector
-sudo pecl install php_mongo
+sudo pecl install mongo
 
 #Create Mongo PHP extension ini
 touch /etc/php5/mods-available/mongodb.ini
@@ -80,7 +83,7 @@ sudo npm install -g grunt-cli
 sudo npm install -g jshint
 sudo npm install -g karma-cli
 sudo npm install -g less
-sudo npm install -g meanio@latest
+sudo npm install -g mean-cli
 sudo npm install -g mongoose
 sudo npm install -g nodemon
 
@@ -135,10 +138,13 @@ sudo apt-get install ubuntu-restricted-extras
 #install gdebi to install deb files instead of using ubuntu software center
 sudo apt-get install aptitude synaptic gdebi-core
 
+#Open in terminal in folder
+sudo apt-get install nautilus-open-terminal
+
 #remove dots in login screen
 #sudo xhost +SI:localuser:lightdm
 #sudo su lightdm -s /bin/bash
-#gsettings set com.canonical.unity-greeter draw-grid false;exit 
+#gsettings set com.canonical.unity-greeter draw-grid false;exit
 
 #Install Java
 sudo apt-get install default-jre
