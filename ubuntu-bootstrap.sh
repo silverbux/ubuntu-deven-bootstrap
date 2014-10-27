@@ -155,4 +155,14 @@ sudo apt-get autoclean
 sudo apt-get update
 sudo apt-get clean
 
+# -------------------------------------------
+# App List ( manual install )
+# -------------------------------------------
+# filezilla
+# mysql workbench
+# qbittorrent
+# dropbox
+# terminator
+# gimp
+
 echo "========== FINISH!!! =========="
