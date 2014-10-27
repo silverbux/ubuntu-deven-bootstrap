@@ -59,11 +59,12 @@ sudo service mongod restart
 sudo apt-get install zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 chsh -s /bin/zsh
+#sudo shutdown -r 0
 
 #Install Ruby
 \curl -sSL https://get.rvm.io | bash -s stable
 source /home/silverbux/.rvm/scripts/rvm
-#echo "export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting" >>  /home/silverbux/.zshrc
+sudo echo "export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting" >>  /home/silverbux/.zshrc
 rvm install ruby-2.1.1 --disable-binary
 rvm reload  && rvm use 2.1.1 --default
 rvm reload
@@ -71,10 +72,6 @@ sudo apt-get install ca-certificates
 gem update --system
 gem install rb-gsl bundler github-pages rails
 gem cleanup
-
-#Install Git
-sudo apt-get install git
-sudo apt-get install curl
 
 #Install Nodejs Packages
 sudo npm install -g bower
@@ -139,8 +136,9 @@ sudo apt-get install ubuntu-restricted-extras
 sudo apt-get install aptitude synaptic gdebi-core
 
 #remove dots in login screen
-sudo xhost +SI:localuser:lightdm
-gsettings set com.canonical.unity-greeter draw-grid false
+#sudo xhost +SI:localuser:lightdm
+#sudo su lightdm -s /bin/bash
+#gsettings set com.canonical.unity-greeter draw-grid false;exit 
 
 #Install Java
 sudo apt-get install default-jre
