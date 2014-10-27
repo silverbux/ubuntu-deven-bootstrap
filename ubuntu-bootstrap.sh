@@ -29,7 +29,7 @@ sudo php5enmod mongodb
 #Restart Apache
 sudo service apache2 restart
 
-#Install Git 
+#Install Git
 sudo apt-get install git
 sudo apt-get install git-core
 
@@ -58,7 +58,7 @@ sudo service mongod restart
 #Install oh-my-zsh
 sudo apt-get install zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-chsh -s `which zsh`
+chsh -s /bin/zsh
 
 #Install Ruby
 \curl -sSL https://get.rvm.io | bash -s stable
@@ -120,8 +120,36 @@ sudo apt-get install google-chrome-stable
 #Install Emma Mysql-Manager
 sudo apt-get install emma
 
+#Install docky
+sudo apt-get install docky
+
+#Install vlc
+sudo apt-get install vlc
+
+#Disable overlay Scrollbars:
+gsettings set com.canonical.desktop.interface scrollbar-mode normal
+
+#Put the username back on the the panel
+gsettings set com.canonical.indicator.session show-real-name-on-panel true
+
+#Make playing media easy
+sudo apt-get install ubuntu-restricted-extras
+
+#install gdebi to install deb files instead of using ubuntu software center
+sudo apt-get install aptitude synaptic gdebi-core
+
+#remove dots in login screen
+sudo xhost +SI:localuser:lightdm
+sudo su lightdm -s /bin/bash
+gsettings set com.canonical.unity-greeter draw-grid false
+
 #Install Java
 sudo apt-get install default-jre
 
-apt-get clean
+#let's clean stuff
+sudo apt-get autoremove
+sudo apt-get autoclean
+sudo apt-get update
+sudo apt-get clean
 
+echo "========== FINISH!!! =========="
