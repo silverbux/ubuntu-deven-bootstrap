@@ -189,6 +189,10 @@ sudo apt-get install nautilus-open-terminal
 #Install Java
 sudo apt-get install default-jre
 
+#Install Jekyll 
+sudo apt-get install ruby-dev
+sudo gem install jekyll
+
 #let's clean stuff
 sudo apt-get autoremove
 sudo apt-get autoclean
