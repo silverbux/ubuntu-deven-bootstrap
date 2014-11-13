@@ -112,16 +112,16 @@ gem cleanup
 # ----------------------------------------------------------------------------
 
 # Install Vim-Nox
-sudo apt-get install vim-nox
+#sudo apt-get install vim-nox
 
 # Centralise Vim Stuff
-mkdir -p .vim/.viminfo .vim/backups/ .vim/colors .vim/swaps .vim/undo
+#mkdir -p .vim/.viminfo .vim/backups/ .vim/colors .vim/swaps .vim/undo
 
 # Set .vimrc
-curl -o $HOME/.vimrc https://raw.githubusercontent.com/pongstr/dotfiles/master/bin/vim/.vimrc
+#curl -o $HOME/.vimrc https://raw.githubusercontent.com/pongstr/dotfiles/master/bin/vim/.vimrc
 
 # Set Vim colors to Ocean Dark
-curl -o $HOME/.vim/colors/Pongstr\ Base-16.vim https://raw.githubusercontent.com/pongstr/dotfiles/master/bin/vim/Pongstr%20Base-16.vim
+#curl -o $HOME/.vim/colors/Pongstr\ Base-16.vim https://raw.githubusercontent.com/pongstr/dotfiles/master/bin/vim/Pongstr%20Base-16.vim
 
 # Install Sublime Text 3
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
